@@ -1,7 +1,13 @@
-<h1>Pack#show</h1>
-<p>Find me in app/views/pack/show.html.erb</p>
 
 <h2><%= @pack.name %></h2>
-<p><%= @pack.description %></p>
-<p><%= @pack.price %></p>
-<p><%= @pack.genre %></p>
+<p>Genre: <%= @pack.genre %></p>
+<p>Description: <%= @pack.description %></p>
+<p>Price: <%= @pack.price %>€</p>
+
+<h2>Reviews</h2>
+
+<ul>
+  <% @reviews.each do |review| %>
+    <li><%= review.content %> - <%= review.rating %></li>
+  <% end %>
+</ul>

@@ -5,5 +5,6 @@ class PacksController < ApplicationController
 
   def show
     @pack = Pack.find(params[:id])
+    @reviews = Review.where(pack_id: params[:id])
   end
 end
