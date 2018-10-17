@@ -3,6 +3,6 @@
 
 <ul>
   <% @packs.each do |pack| %>
-    <li><%= pack.name %></li>
+    <li><%= link_to pack.name, pack_path(pack)%></li>
   <% end %>
 </ul>
