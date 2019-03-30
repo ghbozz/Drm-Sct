@@ -1,6 +1,7 @@
 class PacksController < ApplicationController
+  before_action :authenticate_user!, :except => [:index]
   def index
-    @packs = Pack.all
+    @packs = Pack.order('created_at DESC')
   end
 
   def show
