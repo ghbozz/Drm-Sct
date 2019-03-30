@@ -1,4 +1,6 @@
 Rails.application.routes.draw do
+  resources :orders, only: [:show, :create]
+  resources :charges
   resources :packs do
     resources :reviews
   end
